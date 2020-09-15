@@ -4,11 +4,11 @@ export const saveComment = (comment) => ({
     payload: comment
 })
 
-export const fetchComments = async () => {
-    const response = await fetch('http://jsonplaceholder.typicode.com/comments')
+export const fetchComments = () => {
+    const response = fetch('http://jsonplaceholder.typicode.com/comments')
     return {
         type: FETCH_COMMENTS,
-        payload: await response.json()
+        payload: response
     }
 }
 
